@@ -33,12 +33,12 @@ const WorkoutCreate = (props) => {
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="description" />
-                    <Input name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+                    <Input name="description" value={description} onChange={(e) => setDescription(e.target.value)} required/>
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="definition" />
-                    <Input type="select" name="definition" value={definition} onChange={(e) => setDefinition(e.target.value)}>
-                        <option hidden value="Select">--Select an Option--</option>
+                    <Input type="select" name="definition" value={definition} onChange={(e) => setDefinition(e.target.value)} required>
+                        <option hidden></option>
                         <option value="Time">Time</option>
                         <option value="Weight">Weight</option>
                         <option value="Distance">Distance</option>
@@ -46,7 +46,7 @@ const WorkoutCreate = (props) => {
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="result" />
-                    <Input name="result" value={result} onChange={(e) => setResult(e.target.value)}/>
+                    <Input name="result" value={result} onChange={(e) => setResult(e.target.value)} required/>
                 </FormGroup>
                 <br />
                 <Button type="submit">Click to Submit</Button>
